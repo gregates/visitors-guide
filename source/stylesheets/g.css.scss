@@ -1,0 +1,75 @@
+$bg: #f7f3e9;
+$highlight: #f05945;
+$accent: #a3d2ca;
+$accent-dark: #5eaaa8;
+$black: #111;
+
+@font-face {
+    font-family: charter;
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    src: url('../fonts/charter_regular.woff2') format('woff2');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+  background-color: $accent-dark;
+  color: $black;
+  font-family: 'charter', 'verdana', 'arial', 'sans serif';
+  margin: auto;
+  font-size: 2rem;
+  max-width: 100rem;
+}
+
+article, header, section {
+    display: block;
+}
+
+article, header {
+    padding: 1rem;
+}
+
+section {
+    margin: 1rem;
+    header {
+        background-color: $accent;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    article {
+        background-color: $bg;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+    }
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+a.button {
+    background-color: $highlight;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    border-radius: 10px;
+    color: $bg;
+    text-decoration: none;
+    max-width: 480px;
+    box-shadow: 2px 4px 8px rgba(1, 1, 1, 0.3);
+}
+
+a.button::after {
+    content: '>';
+    text-align: right;
+    float: right;
+}
